@@ -3,3 +3,5 @@ A web application for an NGO where they can interact with people and showcase th
 contribute and help the people in need.
 Technology used: 
 Python ,Django, Bootstrap, HTML, CSS, SqLite
+
+how to run: python manage.py runserver
