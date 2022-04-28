@@ -1,0 +1,92 @@
+
+{% extends 'base.html' %}
+{% block title %}VISION 
+{% endblock title %}
+{% block body %} 
+<style>
+   *{
+      color:white;
+   }
+.card{
+   top: 15px;
+   left:28%;
+   height: 250px;
+   width:600px;
+   background-color: rgb(66, 94, 94);
+   border-radius: 10px;
+   padding:10px;
+   border:teal 2px ;
+}
+
+.head{
+  color: white;
+  
+  background-color: rgb(153, 184, 184);
+}
+
+img{
+   width: 100%;
+   height: 250px;
+}
+   </style>
+   <h1 class='text-center head mb-3'><marquee width="60%" margin-top="50%" height="60px">VISION | MISSION</marquee> </h1>
+<div class="card my-3 mb-3">
+<h2 class='text-center'>VISION</h2>
+
+ <p class='text-center'>
+    Work as a catalyst in bringing sustainable change in the lives of underprivileged children, youth and women, with a life-cycle approach of development.
+
+    Enable the civil society across the world to engage proactively in the change process through the philosophy of civic driven change.
+    
+    Adopt highest standards of governance to emerge as a leading knowledge and technology driven, innovative and scalable international development organisation.
+ </p>   
+</div>
+<div class='container mb-5'>
+<div class='row' style="position:relative;left:5%;">
+<div class='col' >
+   <img src="\static\img\ngo3.jpg">
+   </div>   
+   <div class='col'>
+      <img src="\static\img\vision.jpg">
+   </div>   
+   <div class='col'>
+      <img src="\static\img\building.jpg">
+   </div>   
+</div>
+</div>
+
+<div class="card my-3 mb-5">
+   <h2 class='text-center'>MISSION</h2>
+   
+    <p class='text-center'>
+      Smile Foundation, a non-profit organization in india is to empower underprivileged children, youth and women through relevant education, innovative healthcare and market-focused livelihood programmes.
+Smile Foundation is to deploy best possible methodology and technology for achieving ideal SROI (social return on investment), to practice and promote good governance. To link business competitiveness of the corporate with social development initiatives; also to sensitize privileged children, youth and citizens in general to promote Civic Driven Change.
+
+
+    </p>   
+   </div>
+   <div class='container mb-5'>
+   <div class='row' style="position:relative;left:5%;">
+   <div class='col' >
+      <img src="\static\img\building.jpg">
+      </div>   
+      <div class='col'>
+         <img src="\static\img\building.jpg">
+      </div>   
+      <div class='col'>
+         <img src="\static\img\building.jpg">
+      </div>   
+   </div>
+   </div>
+   <div class="card my-3 mb-5">
+      <h2 class='text-center'>BELIEF</h2>
+      
+       <p class='text-center'>
+         
+         Smile Foundation believes that unless members of the civil society are involved proactively in the process of development, sustainable change will not happen. Believing in this principle of 'Civic Driven Change', Smile Foundation sensitises the civil society in order to make them partners in its mission.
+
+       </p>   
+      </div>
+
+      {%include 'footer.html'%}
+{% endblock body %}

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}JOIN US
+{% endblock title %}
+{% block body %}
+<style>
+*{
+  color:#000;
+}
+  .form-group {
+    position: relative;
+    left:18%;
+    width: 400px;
+  }
+
+  .btnjoin {
+    left:45%;
+    width: 80px;
+  }
+  .head{
+  color: #000;
+  background-color: rgb(153, 184, 184);
+}
+.subhead{
+position: relative;
+left:5%;
+}
+</style>
+<h1 class="head text-center "><marquee width="60%"  height="60px"> JOIN OUR EFFORTS </marquee></h1>
+<div class="container">
+<div class="row">
+  <div class="col ">
+    <img class="my-5 mb-5" src="\static\img\ngo1.jpg">
+    <img src="\static\img\ngo2.jpg">
+  </div>
+
+  <div class="col ">
+    <H3 class="subhead  text-black my-5 mb-3">WANT TO BE ONE OF US | SPREAD SMILES </H3><br>
+    <h5 class="subhead text-center text-black"><b>Fill the form and our team will respond you soon</b></h5>
+    <form method="POST" action="/join">
+      {% csrf_token %}
+      <div class="form-group my-3 mb-3">
+        <label for="name" class="form-label my-4">Name</label>
+        <input type="Text" class="form-control" id="name" name="name">
+
+      </div>
+      <div class="form-group mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="Text" class="form-control" name="contact" id="contact">
+
+      </div>
+      <div class="form-group mb-3">
+        <label for="DOB" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" id="DOB" name="DOB">
+
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="Text" class="form-control" name="city" id="city">
+
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="state" class="form-label">state</label>
+        <input type="Text" class="form-control" name="state" id="state">
+
+      </div>
+      <p class='form-group'>Gender</p>
+      <div class="form-check form-group">
+        <input class="form-check-input" type="radio" name="gender" id="gender" value='Female'>
+        <label class="form-check-label" for="gender">
+          Female
+        </label>
+      </div>
+      <div class="form-check form-group">
+        <input class="form-check-input" type="radio" name="gender" id="gender2" value='male'>
+        <label class="form-check-label" for="gender">
+          Male
+        </label>
+      </div>
+      <div class="form-check form-group mb-3">
+        <input class="form-check-input" type="radio" name="gender" id="gender3" value='other'>
+        <label class="form-check-label" for="gender">
+          other
+        </label>
+      </div>
+      <div class="form-group mb-3">
+        <label for="occupation" class="form-label">occupation</label>
+        <input type="Text" class="form-control" name="occupation" id="occupation">
+
+      </div>
+      <div class="form-group mb-3">
+        <label for="reason" class="form-label">why do you want to join us </label>
+        <input type="Text" class="form-control" name="reason" id="reason">
+
+      </div>
+
+      <button type="submit" class="btn btnjoin btn-primary form-group my-4 mb-4">Submit</button>
+    </form>
+  </div>
+
+</div>
+</div>
+
+
+{%include 'footer.html'%}
+{% endblock body %}

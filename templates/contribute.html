@@ -1,0 +1,116 @@
+
+{% extends 'base.html' %}
+{% block title %}CONTRIBUTE US
+{% endblock title %}
+{% block body %} 
+<style>
+
+.contri{
+  width:500px;
+  border: 2px solid white;
+  padding:30px;
+  margin-left:15%;
+}
+#address{
+left:40%;
+}
+ 
+.form-group{
+color:#000;
+  left:40%;
+  width:400px;
+}
+
+
+.contribtn{
+  position: relative;
+  left:38%;
+  width:80px;
+}
+.card{
+  padding:20px;
+  height:350px;
+  width:600px;
+}
+.head{
+  color: white;
+  
+  background-color: rgb(153, 184, 184);
+}
+</style>
+<h1 class='text-center head mb-3'><marquee width="60%"  height="60px">CONTRIBUTE US</marquee> </h1>
+<div class='row'>
+<div class="col">
+<h3 class='text-center text-black my-4'>Please Fill this form Regarding your Contribution</h3>
+<h5 class='text-center mb-3'>Our team will contact you as soon as possible.</h5>
+<form class='contri' method="POST" action="/contribute">
+ {% csrf_token %} 
+    <div class="form-group my-2 mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="Text" class="form-control" id="name" name="name">
+       
+      </div>
+    <div class="form-group mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text"></div>
+    </div>
+    <div class="form-group mb-3">
+        <label for="contact" class="form-label">Contact Number</label>
+        <input type="Text" class="form-control" id="contact" name="contact">
+       
+      </div>
+    <div class="form-group mb-3">
+        <label for="issue" class="form-label">What do you want to contribute</label>
+        <input type="Text" class="form-control" name="contribution" id="contribution" >
+       
+      </div>
+    <p class="form-group">Choose Preffered Drop Location</p>
+      <div class="form-check form-group">
+  <input class="form-check-input " type="radio" name="center" id="flexRadioDefault1" value='center1'>
+  <label class="form-check-label " for="flexRadioDefault1">
+    Center-1
+  </label>
+</div>
+<div class="form-check form-group">
+  <input class="form-check-input " type="radio" name="center" id="flexRadioDefault2"  value='center2' >
+  <label class="form-check-label " for="flexRadioDefault2">
+    Center-2
+  </label>
+</div>
+
+    
+   
+    <button type="submit" class="btn contribtn  btn-primary my-4 mb-4">Submit</button>
+  </form>
+  </div>  <!--col-->
+
+    <div class="col">
+        <img class="my-5" src="\static\img\building.jpg" style="height:350px;width:600px;border:5px solid white;background-color: white;">
+
+       
+       <div class="card mb-3">
+            <h4 class='text-center'>Center-1<br></h4>
+            <h6 class='text-center'>(Head Office)<br></h6>
+            
+            <p class='text-center'>
+            V - 11 GROUND FLOOR, EKTA ENCLAVE PEERA GARHI CHOWK,GREEN PARK EXTENSION , NEW DELHI - 110016<br>
+            Phone: 41354566 | Fax: +91-11-41354454<br>
+            E-mail: info@smilefoundationindia.org
+           </p>
+
+           <h4 class='text-center'> Center-2<br></h4>
+           <p class='text-center'>
+          AAHWAAN, 246-A FIRST FLOOR OPP VASANT VIHAR BUS DEPOT, NELSON MANDELA MARG, NEW DELHI -110067<br>
+           Phone: 41364646 | Fax: +91-16-41376754<br>
+           E-mail: info@smilefoundationindia.org
+          </p>
+          
+
+         </div>
+       </div>
+  </div>  <!--col-->
+  </div> <!--row-->
+
+  {%include 'footer.html'%}
+{% endblock body %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}JOIN US
+{% endblock title %}
+{% block body %}
+<style>
+    * {
+        color: #000;
+    }
+
+    .form-group {
+        position: relative;
+        left: 18%;
+        width: 400px;
+    }
+
+    .btnjoin {
+        left: 45%;
+        width: 80px;
+    }
+
+    .head {
+        color: #000;
+        background-color: rgb(153, 184, 184);
+    }
+
+    .subhead {
+        position: relative;
+        left: 5%;
+    }
+    img{
+        border-radius: 10px;
+    }
+</style>
+<h1 class="head text-center ">
+    <marquee width="60%" height="60px"> JOIN OUR EFFORTS </marquee>
+</h1>
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <img class="my-5 mb-5" src="\static\img\ngo1.jpg">
+        </div>
+
+        <div class="col ">
+            <H3 class="subhead  text-black my-5 mb-3">Welcome Back | SPREAD SMILES </H3><br>
+            <form method="POST" action="/login">
+                {% csrf_token %}
+
+
+
+                <div class="form-group mb-3">
+                    <label for="contact" class="form-label">Mobile Number</label>
+                    <input type="number" class="form-control" name="number" id="contact" required>
+
+                </div>
+
+
+
+                <div class="form-group mb-3">
+                    <label for="city" class="form-label">Password</label>
+                    <input type="text" class="form-control" name="password" id="city" required>
+
+                </div>
+
+
+
+                <div class="form-group mb-3">
+
+                    <input type="submit" value="Submit" class="btn btnjoin btn-primary form-group my-4 mb-4">
+
+                </div>
+
+                <a class="btn btn-primary" href="/signup">Create a Account ?</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+{%include 'footer.html'%}
+{% endblock body %}

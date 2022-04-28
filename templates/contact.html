@@ -1,0 +1,88 @@
+
+{% extends 'base.html' %}
+{% block title %}CONTACT 
+{% endblock title %}
+{% block body %} 
+<style>
+ .card{
+   left: 15%;
+   top:10%;
+ }
+ .formcon{
+  width:500px;
+ }
+
+  .form-group{
+    color: #000;
+    position:relative;
+    left:10%;
+    width:400px;
+
+  }
+
+  .head{
+  color: #000;
+  
+  background-color: rgb(0, 0, 0);
+}
+  .btncon{
+    left:46%;
+    width:80px;
+    color: #fff;
+  }
+  </style>
+
+
+
+
+<H1 class="text-center head text-black"><marquee width="60%"  height="60px">CONTACT US</marquee></H2>
+<H3 class="mt-5 text-center text-black">HAVE SOME QUESTIONS?</H1>
+
+  <div class="row">
+    
+    <div class="col">
+  
+    <div class="card text-center my-5" style="width:80%;">
+  <div class="card-body my-3">
+    <h5 class="card-title">Main Office:Spread Smiles Foundation</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Visiting Hours: 8:00AM-8:00PM</h6>
+    <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-"></i>  Phone: 41354566 | Fax: +91-11-41354454<br></h6>
+    <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-envelope"></i>Email:info@smilefoundationindia.org</h6>
+    <p class="card-text"><B> V - 11 GROUND FLOOR, EKTA ENCLAVE PEERA GARHI CHOWK,GREEN PARK EXTENSION , NEW DELHI - 110016</B></p>
+  
+    
+  </div>
+</div>
+    </div>
+    <div class="col">
+     
+      <br>
+      <form class='formcon mb-5' style="border:2px solid white" method="POST" action="/contact">
+       {% csrf_token %} 
+        <H4 class="text-center my-3 text-black">Write To Us</H4>
+          <div class="form-group my-3 mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="Text" class="form-control" id="name" name="name">
+             
+            </div>
+          <div class="form-group mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="form-group mb-3">
+              <label for="issue" class="form-label">Issue</label>
+              <input type="Text" class="form-control" name="issue" id="issue" >
+             
+            </div>
+          
+         
+          <button type="submit" class="btn btncon btn-primary form-group mb-3">SEND </button>
+        </form>
+    </div>
+
+
+
+
+    {%include 'footer.html'%}
+{% endblock body %}

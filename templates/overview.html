@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}ABOUT
+{% endblock title %}
+{% block body %}
+<style>
+  .container {
+    margin-left: 7%;
+    padding: 20px;
+  }
+
+  .col {
+    margin-left: 30px;
+  }
+
+  * {
+    color: #000;
+  }
+
+  .head {
+    color: white;
+
+    background-color: rgb(153, 184, 184);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+</style>
+<h1 class="head text-center ">
+  <marquee width="60%" height="60px"> ABOUT US </marquee>
+</h1>
+<h3 class='mt-5 text-center '>Who we are | What we do</h3>
+
+<div class="container ">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="col ">
+      <img class="my-4 " src="\static\img\about.jpg ">
+    </div><!-- /.col-lg-4 -->
+    <div class='col'>
+      <p class='my-5'>S3 was born out of the conviction that meaningful literacy enables transformation of lives and is
+        imperative to progress, both individual and societal. Every child, regardless of socio-economic strata,has a
+        right to quality education, mentorship and equal opportunities to realise and maximise his potential.Most SAC
+        children attend municipal or private aided schools and come from families with no formal education but
+        aspirations of a better future through educating their children. Inadequate guidance and emphasis on “rote
+        learning” results in children being “exam ready” without any real learning. <br> <br> We strive to provide
+        remedial education in a joyous, positive and encouraging ambience to enable children discover and realise their
+        talents and potential. It is our endeavour at SAC to journey with the kids through their school years and equip
+        them to be gainfully employable.<br>
+      </p>
+
+
+    </div>
+  </div>
+  <!--row-->
+  <h4 class='my-2 text-center text-black'>
+    We believe regular interaction with educated adults through academic and non-academic activities builds self-esteem,
+    confidence, strong values and a thirst for learning.
+
+  </h4>
+</div>
+
+{%include 'footer.html'%}
+{% endblock body %}
